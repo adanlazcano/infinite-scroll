@@ -1,8 +1,8 @@
 import usePosts from "hooks/usePosts";
 import { useState,useRef,useCallback } from "react";
-import Post from "./Post";
+import Post from "../Post";
 
-const Example1 = () => {
+const Scroll = () => {
   const [pageNum, setPageNum] = useState(1);
   const { isLoading, isError, error, results, hasNextPage } = usePosts(pageNum);
   const intObserver = useRef()
@@ -38,7 +38,7 @@ const Example1 = () => {
   return (
     <>
       <h1 id="top">
-        &infin; Infinite Query &amp; Scroll <br /> &infin; Ex.1 react only
+        &infin; Infinite Query &amp; Scroll <br /> &infin; React only
       </h1>
       {isLoading && <p className="center">Loading more posts ....</p>}
       {content}
@@ -48,4 +48,4 @@ const Example1 = () => {
     </>
   );
 };
-export default Example1;
+export default Scroll;

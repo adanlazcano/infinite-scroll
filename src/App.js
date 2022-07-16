@@ -1,4 +1,4 @@
-import Scroll from "components/Scroll";
+import Scroll from "components/scroll-query/Scroll";
 
 
 function App() {
