@@ -18,7 +18,6 @@ const usePosts = (pageNum = 1) => {
 
     getPostsPage(pageNum, { signal })
       .then((data) => {
-       
         setResults((prev) => [...prev, ...data]);
         setHasNextPage(Boolean(data.length));
       })
@@ -28,7 +27,7 @@ const usePosts = (pageNum = 1) => {
         setError({ message: err.message });
       })
       .finally((_) => {
-         setIsLoading(false);
+        setIsLoading(false);
       });
 
     return () => {

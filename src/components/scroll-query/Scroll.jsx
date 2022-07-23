@@ -1,11 +1,9 @@
 import { useInfiniteQuery } from "react-query";
-import {  useRef, useCallback } from "react";
+import { useRef, useCallback } from "react";
 import Post from "../Post";
 import { getPostsPage } from "api/axios";
 
 const Scroll = () => {
-
-
   const {
     fetchNextPage,
     hasNextPage,
@@ -33,7 +31,6 @@ const Scroll = () => {
         if (posts[0].isIntersecting && hasNextPage) {
           console.log("we are near the last post");
           fetchNextPage();
-         
         }
       });
 
@@ -59,9 +56,7 @@ const Scroll = () => {
 
   return (
     <>
-      <h1 id="top">
-       &infin; useInfiniteQuery
-      </h1>
+      <h1 id="top">&infin; useInfiniteQuery</h1>
       {isFetchingNextPage && <p className="center">Loading more posts ....</p>}
       {content}
       <p className="center">
