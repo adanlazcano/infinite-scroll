@@ -9,3 +9,8 @@ const response = await api.get(`/posts?_page=${pageParam}`,options)
 
 return response.data;
 }
+
+export const getPosts = async () =>{
+    const response = await api.get('/posts');
+    return response.data
+}
